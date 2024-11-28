@@ -16,6 +16,14 @@ import { toast } from "sonner";
 export function PageTwo() {
   const navigate = useNavigate();
 
+  function handleSaveClick() {
+    toast.success("Dados salvos com sucesso!");
+
+    setTimeout(() => {
+      navigate("/");
+    }, 2000);
+  }
+
   return (
     <div className="px-4 md:max-w-[80%] mx-auto">
       <header className="mt-6 mb-6">
@@ -100,12 +108,15 @@ export function PageTwo() {
         </div>
       </div>
       <div className="w-full flex justify-end py-4 gap-2">
-        <Button className="bg-inherit border hover:bg-slate-50 text-black">
+        <Button
+          className="bg-inherit border hover:bg-slate-50 text-black"
+          onClick={() => navigate(-1)}
+        >
           Voltar
         </Button>
         <Button
           className="flex items-center gap-2 bg-blue-900 hover:bg-blue-900/90 text-white"
-          onClick={() => toast("Dados salvos com sucesso!") && navigate("/")}
+          onClick={handleSaveClick}
         >
           Salvar
         </Button>

@@ -18,7 +18,7 @@ const items = [
   },
   {
     title: "Agendamento",
-    url: "/two",
+    url: "/agendamento",
     icon: Calendar,
   },
   {

@@ -7,7 +7,7 @@ import {
   ListFilter,
   MoreVertical,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -47,6 +47,8 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export function PageOne() {
+  const navigate = useNavigate();
+
   return (
     <div className="max-w-[96%] mx-auto flex flex-col justify-between">
       <header className=" my-6 flex items-center justify-between">
@@ -72,7 +74,10 @@ export function PageOne() {
                 </CardDescription>
               </CardHeader>
               <CardFooter>
-                <Button className="bg-blue-900 hover:bg-blue-900/90">
+                <Button
+                  className="bg-blue-900 hover:bg-blue-900/90"
+                  onClick={() => navigate("/agendamento")}
+                >
                   Agendar nova consulta
                 </Button>
               </CardFooter>
@@ -188,7 +193,7 @@ export function PageOne() {
                           </Badge>
                         </TableCell>
                         <TableCell className="hidden md:table-cell">
-                          2023-11-23
+                          24-11-2024
                         </TableCell>
                         <TableCell className="text-right">R$ 250,00</TableCell>
                       </TableRow>
@@ -208,7 +213,7 @@ export function PageOne() {
                           </Badge>
                         </TableCell>
                         <TableCell className="hidden md:table-cell">
-                          2023-11-24
+                          24-11-2024
                         </TableCell>
                         <TableCell className="text-right">R$ 450,00</TableCell>
                       </TableRow>
@@ -228,7 +233,7 @@ export function PageOne() {
                           </Badge>
                         </TableCell>
                         <TableCell className="hidden md:table-cell">
-                          2023-11-25
+                          24-11-2024
                         </TableCell>
                         <TableCell className="text-right">R$ 550,00</TableCell>
                       </TableRow>

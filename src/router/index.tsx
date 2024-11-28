@@ -8,7 +8,7 @@ export function Router() {
   return (
     <Routes>
       <Route path="/" element={<PageOne />} />
-      <Route path="/two" element={<PageTwo />} />
+      <Route path="/agendamento" element={<PageTwo />} />
       <Route path="/three" element={<PageThree />} />
       <Route path="/four" element={<PageFour />} />
     </Routes>
